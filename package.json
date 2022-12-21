@@ -17,4 +17,7 @@
         "url": "https://github.com/florianldt/fcm-playground/issues"
     },
     "homepage": "https://github.com/florianldt/fcm-playground#readme",
+    "dependencies": {
+        "firebase-admin": "^11.4.0"
+    }
 }
