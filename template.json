@@ -1,0 +1,17 @@
+{
+    "apns": {
+        "payload": {
+            "aps": {
+                "contentAvailable": true,
+                "sound": "default"
+            }
+        }
+    },
+    "data": {
+        "hello": "world"
+    },
+    "notification": {
+        "body": "This is a notification sent using the Firebase Cloud Messaging Sandbox",
+        "title": "FCM Sandbox"
+    }
+}

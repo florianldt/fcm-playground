@@ -1,5 +1,6 @@
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccount.json");
+const template = require("./template.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -15,25 +16,7 @@ if (!args.length) {
 const registrationToken = args[0];
 
 const message = {
-    apns: {
-        payload: {
-            aps: {
-                contentAvailable: true,
-                sound: "default",
-            },
-        },
-    },
-    data: {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        created_at: "2021-01-30T08:30:00Z",
-        id: "c6cd03d8-37c5-4445-bd28-93d1fef50375",
-        logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-        title: "You have a new successful transaction on hooonk.com",
-    },
-    notification: {
-        body: "{NOTIFICATION_TITLE}",
-        title: "New Hooonk 🔊🔊",
-    },
+    ...template,
     token: registrationToken,
 };
 
