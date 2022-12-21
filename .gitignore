@@ -131,3 +131,4 @@ dist
 
 # Firebase
 serviceAccount.json
+template.json.example
